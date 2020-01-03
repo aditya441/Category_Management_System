@@ -13,16 +13,46 @@ export class Header extends Component {
   productSubmitForm = (data, e) => {
     e.preventDefault();
     console.log(data);
+    fetch("http://localhost:5000/products", {
+      method: "POST",
+      headers: {
+          "Content-type": "application/json"
+          },
+          body: JSON.stringify(data)
+      })
+      .then(res => res.text())
+      .then(res => alert(res));
+
   }
 
   categorySubmitForm = (data, e) => {
     e.preventDefault();
     console.log(data);
+    fetch("http://localhost:5000/categories", {
+      method: "POST",
+      headers: {
+          "Content-type": "application/json"
+          },
+          body: JSON.stringify(data)
+      })
+      .then(res => res.text())
+      .then(res => alert(res));
+
   }
 
   brandSubmitForm = (data, e) => {
     e.preventDefault();
     console.log(data);
+    fetch("http://localhost:5000/brands", {
+      method: "POST",
+      headers: {
+          "Content-type": "application/json"
+          },
+          body: JSON.stringify(data)
+      })
+      .then(res => res.text())
+      .then(res => alert(res));
+
   }
 
   render() {
