@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import "./App.css";
 import store from "./store";
 import Header from "./components/Header";
+import DataListing from "./components/dataListing";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Router>
           <Route path="/">
             <Header />
+            <DataListing />
           </Route>
         </Router>
     </Provider>
